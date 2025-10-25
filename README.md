@@ -31,8 +31,7 @@ A **fast, recursive Sudoku Solver** written in C that uses **backtracking** and 
 The solver uses a **depth-first search backtracking algorithm**.
 
 > According to Wikipedia:  
-> “Briefly, a program would solve a puzzle by placing the digit ‘1’ in the first cell and checking if it is allowed...  
-> If no valid digit fits, it backtracks to the previous cell and tries the next possible number.”
+> “Briefly, a program would solve a puzzle by placing the digit "1" in the first cell and checking if it is allowed to be there. If there are no  violations (checking row, column, and box constraints) then the algorithm advances to the next cell and places a "1" in that cell. When checking for  violations, if it is discovered that the "1" is not allowed, the value is advanced to "2". If a cell is discovered where none of the 9 digits is allowed,  then the algorithm leaves that cell blank and moves back to the previous cell. The value in that cell is then incremented by one. This is repeated until  the allowed value in the last (81st) cell is discovered.”
 
 ## 🧠 My Implementation
 
