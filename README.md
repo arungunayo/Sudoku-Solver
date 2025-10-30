@@ -9,7 +9,7 @@ A **fast, recursive Sudoku Solver** written in C that uses **backtracking** and 
 
 ---
 
-## 🚀 Features
+## | Features
 
 - Solves standard **9×9 Sudoku puzzles**
 - Implements **backtracking with recursion**
@@ -19,21 +19,21 @@ A **fast, recursive Sudoku Solver** written in C that uses **backtracking** and 
 
 ---
 
-## 📊 Datasets Used
+## | Datasets Used
 
 - [9 Million Sudoku Problems – Rohan Rao (1.48 GB)](https://www.kaggle.com/datasets/rohanrao/sudoku)  
 - [1 Million Sudoku Problems – Bryan Park (164 MB)](https://www.kaggle.com/datasets/bryanpark/sudoku)
 
 ---
 
-## ⚙️ How It Works (Algorithm Overview)
+## | How It Works (Algorithm Overview)
 
 The solver uses a **depth-first search backtracking algorithm**.
 
 > According to Wikipedia:  
 > “Briefly, a program would solve a puzzle by placing the digit "1" in the first cell and checking if it is allowed to be there. If there are no  violations (checking row, column, and box constraints) then the algorithm advances to the next cell and places a "1" in that cell. When checking for  violations, if it is discovered that the "1" is not allowed, the value is advanced to "2". If a cell is discovered where none of the 9 digits is allowed,  then the algorithm leaves that cell blank and moves back to the previous cell. The value in that cell is then incremented by one. This is repeated until  the allowed value in the last (81st) cell is discovered.”
 
-## 🧠 My Implementation
+## | My Implementation
 
 My version expands on this idea using recursion for simplicity and reliability:
 
@@ -49,14 +49,14 @@ My version expands on this idea using recursion for simplicity and reliability:
 5. **Otherwise**, reset the cell (`0`) and try the next number.
 6. If no number works → `return false` → backtrack.
 
-## ⚡ Performance
+## | Performance
 - Solves up to **9 million puzzles** in parallel using OpenMP.
 - Average solving time per puzzle: **~1–3 ms** (depending on CPU).
 - Verified accuracy: **100%** across both Kaggle datasets.
 
 
 
-## 🧑‍💻 Example Usage
+## | Example Usage
 
 ### For batch testing
 
@@ -82,20 +82,20 @@ gcc sudoku_solver.c  -o sudoku_solver.exe
 ./sudoku_solver.exe 
 ```
 
-## 🧩 Future Improvements
+## | Future Improvements
 
 1. Add GUI or web interface for visualization
 
 2. Support for variable grid sizes (e.g., 16×16)
 
 
-## 🔧 Dependencies
+## | Dependencies
 - **Compiler:** GCC (supports OpenMP)
 - **Operating System:** Windows (tested), should work on Linux/macOS with *minor changes*
 - **Libraries:** OpenMP (included with GCC)
 
 
-## 📁 Project Structure
+## | Project Structure
 ``` 
 .
 ├── sudoku_solver_heavyweight.c        # Main solver code for large batches
@@ -104,5 +104,5 @@ gcc sudoku_solver.c  -o sudoku_solver.exe
 └── README.md                           # Documentation
 ```
 
-## 🧾 License
+## | License
 This project is open-source under the **MIT License**.
